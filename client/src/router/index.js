@@ -10,6 +10,11 @@ import BlogCreate from '../components/Blogs/CreateBlog.vue'
 import BlogEdit from '../components/Blogs/EditBlog.vue'
 import BlogShow from '../components/Blogs/ShowBlog.vue'
 
+import CustomerIndex from '../components/Customers/Index.vue'
+import CustomerCreate from '../components/Customers/CreateCustomer.vue'
+import CustomerShow from '../components/Customers/ShowCustomer.vue'
+import CustomerEdit from '../components/Customers/EditCustomer.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,6 +48,26 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/customers',
+      name: 'customers',
+      component: CustomerIndex
+    },
+    {
+      path: '/customer/create',
+      name: 'customer-create',
+      component: CustomerCreate
+    },
+    {
+      path: '/customer/edit/:customerId',
+      name: 'customer-edit',
+      component: CustomerEdit
+    },
+    {
+      path: '/customer/:customerId',
+      name: 'customer',
+      component: CustomerShow
     },
     {
       path: '/blogs',
